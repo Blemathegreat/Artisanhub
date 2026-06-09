@@ -6,6 +6,7 @@ import Choose2 from './images/choose2.png'
 import FemaleTailor from './images/FemaleTailor.png'
 import Hero from './images/hero.png'
 import Location from './images/location.png'
+import Video from './images/video.png'
 import Password from './images/password.png'
 import Verified from './images/verified.png'
 import Electrician from './images/electrician.png'
@@ -13,6 +14,7 @@ import Electrician from './images/electrician.png'
 
 export const photos ={
     logo:Logo,
+    video:Video,
     barber:Barber,
     barber1:Barber1,
     choose1:Choose1,
