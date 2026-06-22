@@ -5,10 +5,12 @@ import ArtisanProfile from './pages/ArtisanProfile'
 import Dashboard from './pages/Dashboard'
 import {Routes, Route} from 'react-router-dom'
 import PublicNav from './components/PublicNav'
+import { Toaster } from 'react-hot-toast'
 
 export default function App() {
   return (
     <div>
+      <Toaster/> 
       <PublicNav />
         <Routes>
           <Route path='/' element={<Home/>} />

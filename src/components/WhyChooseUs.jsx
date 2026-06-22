@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, ThumbsUp, MapPin, Lock } from "lucide-react";
+import { motion } from "framer-motion";
 
 const reasons = [
   {
@@ -23,11 +24,25 @@ const reasons = [
     subtitle: "Your information and payments are always protected.",
   },
 ];
-
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 1  // delay between each child
+    }
+  }
+};
+const childrenVariant ={
+  hidden:{opacity:0},
+  visible:{opacity:1},
+  
+  
+}
 export default function WhyChooseUs() {
   return (
-    <div className="w-full px-6 py-10">
-      <div className="max-w-7xl mx-auto bg-gray-100 rounded-2xl px-10 py-10">
+    <div className="w-full px-6 py-10 md:px-10">
+      <div className=" bg-gray-100 rounded-2xl px-10 py-10">
 
         {/* Header */}
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
@@ -35,9 +50,9 @@ export default function WhyChooseUs() {
         </h2>
 
         {/* Items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-8">
+        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{once:true}} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-8">
           {reasons.map((reason) => (
-            <div key={reason.title} className="flex items-start gap-4">
+            <motion.div variants={childrenVariant} key={reason.title}  className="flex items-start gap-4">
               {/* Icon */}
               <div className="p-2  rounded-xl shrink-0">
                 <reason.Icon size={40} className="text-green-700" />
@@ -47,9 +62,9 @@ export default function WhyChooseUs() {
                 <h3 className="text-sm font-bold text-gray-900 mb-1">{reason.title}</h3>
                 <p className="text-xs text-gray-500 leading-5">{reason.subtitle}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </div>

@@ -1,3 +1,6 @@
+import React from "react";
+import { motion } from "framer-motion";
+
 const steps = [
   {
     id: 1,
@@ -54,10 +57,25 @@ const steps = [
     iconWrapperClass: "rounded-full",
   },
 ];
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5  // delay between each child
+    }
+  }
+};
+const childrenVariant ={
+  hidden:{opacity:0},
+  visible:{opacity:1},
+  
+  
+}
 
 const Connector = () => (
-  <div className="hidden md:flex items-center self-center mb-8 px-2">
-    <div className="w-16 border-t-2 border-dashed border-[#1D9E75] opacity-60" />
+  <div className="hidden md:flex items-center self-center mb-8 ">
+    <div className="w-[200px] border-t-2 border-dashed border-[#1D9E75] opacity-90" />
   </div>
 );
 
@@ -67,12 +85,13 @@ export default function HowItWorks() {
       <h2 className="text-2xl font-bold text-gray-900 mb-2">How it works</h2>
       <p className="text-sm text-gray-500 mb-12">Get the best artisan service in 3 easy steps</p>
 
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 max-w-7xl mx-auto">
+      <motion.div variants={containerVariants} initial="hidden" whileInView="visible"  className className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 px-6 lg:px-10">
         {steps.map((step, index) => (
           <>
             {/* Card */}
-            <div
+            <motion.div
               key={step.id}
+              variants={childrenVariant}
               className="flex  items-center justify-between gap-3 md:space-x-4  bg-white border border-gray-200 rounded-2xl px-4 py-6 md:py-10 w-full md:w-[300px] shadow-sm"
             >
               {/* Icon */}
@@ -89,13 +108,13 @@ export default function HowItWorks() {
                <p className="text-sm font-bold text-gray-900  font-bold">{step.id}. {step.title}</p>
               <p className="text-xs text-gray-700 leading-relaxed font-bold">{step.description}</p>
              </div>
-            </div>
+            </motion.div>
 
             {/* Dashed connector between cards */}
             {index < steps.length - 1 && <Connector key={`connector-${index}`} />}
           </>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
