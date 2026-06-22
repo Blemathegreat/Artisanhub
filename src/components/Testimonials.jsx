@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
   initial="hidden" 
   whileInView="visible"
   viewport={{ once: true }}
-  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 ml-[20px]"
+  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6 w-full lg:ml-[20px]"
 >
   {currentItems.map((t) => (
     <motion.div variants={itemVariant} whileHover={{ 

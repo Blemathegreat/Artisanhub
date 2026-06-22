@@ -9,7 +9,7 @@ const QuoteIcon = () => (
 
 export default function TestimonialCards({ title, description, image, location, rating = 5 }) {
   return (
-    <div className="bg-white rounded-xl border border-gray-100 shadow-sm max-w-[300px] p-5 flex flex-col gap-2">
+    <div className="bg-white rounded-xl border border-gray-100 shadow-sm max-w-[300px] mx-auto lg:mx-0 p-5 flex flex-col gap-4">
       <QuoteIcon />
       <p className="text-sm text-gray-700 w-3/4 leading-relaxed">{description}</p>
       <div className="flex items-center gap-3">
