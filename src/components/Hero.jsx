@@ -186,7 +186,7 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full md:w-[45%] px-6 lg:px-20 lg:pt-10">
+        <div className="relative z-10 w-full md:w-[45%] px-6 lg:px-20  lg:pt-32">
 
           {/* Badge */}
           <span className="inline-flex items-center border border-green-200 bg-green-50 text-green-700 text-sm font-medium px-4 py-2 rounded-full mb-8">
