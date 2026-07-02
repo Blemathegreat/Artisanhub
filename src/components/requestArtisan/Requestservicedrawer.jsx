@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
 import { useRequestService } from '../../hooks/userequestservice.js'
-import RequestServiceForm from './RequestService'
-import RequestReviewStep from './RequestReviewStep'
-import RequestSuccessModal from './RequestSuccessModal'
+import RequestServiceForm from './RequestServiceForm.jsx'
+import RequestReviewStep from './RequestReviewStep.jsx'
+import RequestSuccessModal from './RequestSuccessModal.jsx'
 
 // Detect mobile: drawer slides up from bottom, desktop: slides in from right
 function useIsMobile() {
