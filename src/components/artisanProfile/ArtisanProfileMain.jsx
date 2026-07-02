@@ -39,7 +39,7 @@ export default function ArtisanProfileMain() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ArtisanProfileNav/>
+      <Artisanprofilenav/>
 
       {/* Breadcrumb */}
       <div className="px-4 lg:px-10 border-b border-gray-100 bg-gray-50">
