@@ -10,7 +10,7 @@ export default function PublicNav() {
     { name: "Home", path: "/" },
     { name: "Find Artisans", path: "/search" },
     { name: "How It Works", path: "/how-it-works" },
-    { name: "For Artisans", path: "/for-artisans" },
+    { name: "For Artisans", path: "/onboarding" },
   ];
 
   return (
