@@ -66,7 +66,7 @@ export default function PublicNav() {
           </Link>
 
           <Link
-            to="/for-artisans"
+            to="/onboarding"
             className="body-text bg-green-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-green-600 transition-colors duration-300 shadow-sm"
           >
             Join as Artisan
