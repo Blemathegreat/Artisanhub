@@ -3,7 +3,7 @@ import {
   Star, MapPin, MessageCircle, Phone, Calendar,
   Shield, Home, Clock, Heart, CheckCircle, Grid
 } from 'lucide-react'
-import RequestServiceDrawer from '../requestArtisan/RequestServiceDrawer'
+import Requestservicedrawer from '../requestArtisan/Requestservicedrawer'
 
 export default function ProfileHeader({ artisan }) {
   const [liked, setLiked] = useState(false)
@@ -116,7 +116,7 @@ export default function ProfileHeader({ artisan }) {
       </div>
 
       {/* ── Drawer — mounted here, uses artisan data directly ── */}
-      <RequestServiceDrawer
+      <Requestservicedrawer
         isOpen={isDrawerOpen}
         artisan={artisan}
         onClose={() => setIsDrawerOpen(false)}

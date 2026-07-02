@@ -40,7 +40,7 @@ const stepVariants = {
   exit:    { opacity: 0, x: -24, transition: { duration: 0.2,  ease: 'easeIn'  } },
 }
 
-export default function RequestServiceDrawer({ isOpen, artisan, onClose }) {
+export default function Requestservicedrawer({ isOpen, artisan, onClose }) {
   const isMobile = useIsMobile()
 
   const {
