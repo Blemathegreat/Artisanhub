@@ -1,0 +1,183 @@
+import Logo from './images/logo.png'
+import Barber from './images/barber.png'
+import Barber1 from './images/barber1.png'
+import Choose1 from './images/choose1.png'
+import Choose2 from './images/choose2.png'
+import FemaleTailor from './images/FemaleTailor.png'
+import Hero from './images/hero.png'
+import Location1 from './images/location1.png'
+import Location from './images/location.png'
+import Video from './images/video.png'
+import Scissors from './images/scissors.png'
+import Password from './images/password.png'
+import Verified from './images/verified.png'
+import Artisan1 from "./images/artisan1.png"
+import Artisan2 from "./images/artisan2.png"
+import Artisan3 from "./images/artisan3.png"
+import Artisan4 from "./images/artisan4.png"
+
+export const FashionDesigners = [
+  {
+    id: 7,
+    image: FemaleTailor ,
+    title: "Stitched by Sola",
+    rating: 4.9,
+    location1: Location1,
+    totalRating: 312,
+    location: "Dugbe, Ibadan",
+    distance: "1.0 km away",
+    description: "Ankara Styles, Agbada, Wedding Outfits",
+    whatsapp: "08012345607",
+    call: "08012345607",
+    verified: true,
+    openNow: true,
+    category: "Fashion Designer",
+    homeService: true,
+    experience: "8 Years",
+    responseTime: "1 hour",
+    about: "Stitched by Sola crafts bespoke Ankara styles, agbadas and wedding outfits with exceptional attention to detail.",
+    services: [
+      { name: "Ankara Styles", price: "₦15,000" },
+      { name: "Agbada", price: "₦25,000" },
+      { name: "Wedding Outfit", price: "₦50,000" },
+      { name: "Home Fitting", price: "₦5,000" },
+    ],
+    portfolio: [FemaleTailor , FemaleTailor , FemaleTailor ],
+    videos: [FemaleTailor ],
+    serviceAreas: ["Dugbe", "Gbagi", "Ring Road", "Molete"],
+    reviews: [
+      { id: 1, name: "Titi O.", rating: 5, comment: "Made my wedding outfit and it was stunning." },
+      { id: 2, name: "Amaka J.", rating: 5, comment: "Perfect stitching and very detailed work." },
+    ],
+  },
+  {
+    id: 8,
+    image: FemaleTailor ,
+    title: "Threads & Grace",
+    rating: 4.7,
+    location1: Location1,
+    totalRating: 178,
+    location: "Lekki Phase 1, Lagos",
+    distance: "2.4 km away",
+    description: "Ladies Wear, Bridal, Corporate Styles",
+    whatsapp: "08012345608",
+    call: "08012345608",
+    verified: true,
+    openNow: true,
+    category: "Fashion Designer",
+    homeService: true,
+    experience: "6 Years",
+    responseTime: "2 hours",
+    about: "Threads & Grace is a Lagos-based fashion atelier specializing in ladies wear, bridal collections and corporate outfits.",
+    services: [
+      { name: "Ladies Wear", price: "₦12,000" },
+      { name: "Bridal Outfit", price: "₦60,000" },
+      { name: "Corporate Styles", price: "₦18,000" },
+      { name: "Home Consultation", price: "₦5,000" },
+    ],
+    portfolio: [FemaleTailor , FemaleTailor , FemaleTailor ],
+    videos: [FemaleTailor ],
+    serviceAreas: ["Lekki Phase 1", "Ajah", "VGC", "Chevron"],
+    reviews: [
+      { id: 1, name: "Ngozi B.", rating: 5, comment: "My bridal gown was a dream come true." },
+      { id: 2, name: "Shade F.", rating: 4, comment: "Corporate outfits always on point." },
+    ],
+  },
+  {
+    id: 9,
+    image: FemaleTailor ,
+    title: "Adire Couture",
+    rating: 4.5,
+    location1: Location1,
+    totalRating: 143,
+    location: "Abeokuta, Ogun State",
+    distance: "1.8 km away",
+    description: "Adire Designs, Casual Wear, Traditional Outfits",
+    whatsapp: "08012345609",
+    call: "08012345609",
+    verified: true,
+    openNow: false,
+    category: "Fashion Designer",
+    homeService: false,
+    experience: "5 Years",
+    responseTime: "3 hours",
+    about: "Adire Couture celebrates Yoruba textile heritage through handcrafted adire designs, casual and traditional outfits.",
+    services: [
+      { name: "Adire Design", price: "₦10,000" },
+      { name: "Casual Wear", price: "₦8,000" },
+      { name: "Traditional Outfit", price: "₦20,000" },
+    ],
+    portfolio: [FemaleTailor , FemaleTailor , FemaleTailor ],
+    videos: [FemaleTailor ],
+    serviceAreas: ["Abeokuta", "Oke-Ona", "Panseke", "Kemta"],
+    reviews: [
+      { id: 1, name: "Yetunde A.", rating: 5, comment: "The adire fabric work is absolutely beautiful." },
+      { id: 2, name: "Kola M.", rating: 4, comment: "Traditional outfit came out perfectly." },
+    ],
+  },
+  {
+    id: 10,
+    image: FemaleTailor ,
+    title: "Velvet Stitch Atelier",
+    rating: 4.8,
+    location1: Location1,
+    totalRating: 224,
+    location: "Victoria Island, Lagos",
+    distance: "0.5 km away",
+    description: "Evening Gowns, Corporate Wear, Tailoring",
+    whatsapp: "08012345610",
+    call: "08012345610",
+    verified: true,
+    openNow: true,
+    category: "Fashion Designer",
+    homeService: true,
+    experience: "10 Years",
+    responseTime: "1 hour",
+    about: "Velvet Stitch Atelier is a luxury fashion house on VI crafting exquisite evening gowns, tailored suits and corporate wear.",
+    services: [
+      { name: "Evening Gown", price: "₦45,000" },
+      { name: "Corporate Wear", price: "₦22,000" },
+      { name: "Tailoring", price: "₦15,000" },
+      { name: "Home Consultation", price: "₦8,000" },
+    ],
+    portfolio: [FemaleTailor , FemaleTailor , FemaleTailor ],
+    videos: [FemaleTailor ],
+    serviceAreas: ["Victoria Island", "Ikoyi", "Oniru", "Eko Atlantic"],
+    reviews: [
+      { id: 1, name: "Funke E.", rating: 5, comment: "Premium quality, worth every kobo." },
+      { id: 2, name: "Adaeze C.", rating: 5, comment: "My evening gown was the talk of the event." },
+    ],
+  },
+  {
+    id: 11,
+    image: FemaleTailor ,
+    title: "Kemi's Fashion Hub",
+    rating: 4.2,
+    location1: Location1,
+    totalRating: 67,
+    location: "Osogbo, Osun State",
+    distance: "3.5 km away",
+    description: "Ankara, Aso-Oke, Children Wear",
+    whatsapp: "08012345611",
+    call: "08012345611",
+    verified: false,
+    openNow: true,
+    category: "Fashion Designer",
+    homeService: false,
+    experience: "3 Years",
+    responseTime: "4 hours",
+    about: "Kemi's Fashion Hub brings affordable Ankara, aso-oke and children's wear to the Osogbo community.",
+    services: [
+      { name: "Ankara Styles", price: "₦8,000" },
+      { name: "Aso-Oke Set", price: "₦30,000" },
+      { name: "Children Wear", price: "₦5,000" },
+    ],
+    portfolio: [FemaleTailor , FemaleTailor , FemaleTailor ],
+    videos: [FemaleTailor ],
+    serviceAreas: ["Osogbo", "Oke-Fia", "Alekuwodo", "Igbona"],
+    reviews: [
+      { id: 1, name: "Bimpe R.", rating: 4, comment: "Good work for the price." },
+      { id: 2, name: "Tosin A.", rating: 4, comment: "Kids outfits came out lovely." },
+    ],
+  },
+]

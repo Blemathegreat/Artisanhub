@@ -54,14 +54,14 @@ export default function FilterContent() {
 
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
-        <h2 className="font-medium text-gray-800 text-base">Filters</h2>
-        <button onClick={clearAll} className="text-xs text-purple-600 font-medium">
+        <h2 className="card-title font-medium text-gray-800 text-base">Filters</h2>
+        <button onClick={clearAll} className="caption text-xs text-purple-600 font-medium">
           Clear all
         </button>
       </div>
 
       {/* Distance */}
-      <p className="font-medium text-gray-700 mb-2">Distance</p>
+      <p className="small-label font-medium text-gray-700 mb-2">Distance</p>
       <div className="flex flex-col gap-2 mb-4">
         {[
           { value: '1', label: 'Near me (0 – 5 km)' },
@@ -78,7 +78,7 @@ export default function FilterContent() {
               onChange={() => setDistance(value)}
               className="accent-purple-600"
             />
-            <span className={distance === value ? 'text-gray-800' : ''}>{label}</span>
+            <span className={`body-text ${distance === value ? 'text-gray-800' : ''}`}>{label}</span>
           </label>
         ))}
       </div>
@@ -86,11 +86,11 @@ export default function FilterContent() {
       <hr className="border-gray-100 mb-4" />
 
       {/* Sort by */}
-      <p className="font-medium text-gray-700 mb-2">Sort by</p>
+      <p className="small-label font-medium text-gray-700 mb-2">Sort by</p>
       <select
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
-        className="w-full border border-gray-200 rounded-lg px-2.5 py-1.5 text-sm text-gray-700 bg-white mb-4"
+        className="body-text w-full border border-gray-200 rounded-lg px-2.5 py-1.5 text-sm text-gray-700 bg-white mb-4"
       >
         <option value="nearest">Nearest</option>
         <option value="rating">Highest Rated</option>
@@ -103,7 +103,7 @@ export default function FilterContent() {
       <hr className="border-gray-100 mb-4" />
 
       {/* Rating */}
-      <p className="font-medium text-gray-700 mb-2">Rating</p>
+      <p className="small-label font-medium text-gray-700 mb-2">Rating</p>
       <div className="flex flex-col gap-2 mb-4">
         {ratingsData.map(({ value, stars, label }) => (
           <label key={value} className="flex items-center gap-2 cursor-pointer">
@@ -125,14 +125,14 @@ export default function FilterContent() {
 
       {/* Open now */}
       <div className="flex items-center justify-between mb-4">
-        <span className="text-gray-500">Open now</span>
+        <span className="body-text text-gray-500">Open now</span>
         <Toggle on={openNow} onToggle={() => setOpenNow((p) => !p)} />
       </div>
 
       <hr className="border-gray-100 mb-4" />
 
       {/* Verified only */}
-      <p className="font-medium text-gray-700 mb-2">Other filters</p>
+      <p className="small-label font-medium text-gray-700 mb-2">Other filters</p>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5 text-gray-500">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -140,7 +140,7 @@ export default function FilterContent() {
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             <path d="m9 12 2 2 4-4"/>
           </svg>
-          <span>Verified only</span>
+          <span className="body-text">Verified only</span>
         </div>
         <Toggle on={verifiedOnly} onToggle={() => setVerifiedOnly((p) => !p)} />
       </div>

@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
       <div className=" bg-gray-100 rounded-2xl px-10 py-10">
 
         {/* Header */}
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+        <h2 className="section-heading text-2xl font-bold text-gray-900 text-center mb-8">
           Why choose ArtisanHub?
         </h2>
 
@@ -59,8 +59,8 @@ export default function WhyChooseUs() {
               </div>
               {/* Text */}
               <div>
-                <h3 className="text-sm font-bold text-gray-900 mb-1">{reason.title}</h3>
-                <p className="text-xs text-gray-500 leading-5">{reason.subtitle}</p>
+                <h3 className="card-title text-sm font-bold text-gray-900 mb-1">{reason.title}</h3>
+                <p className="caption text-xs text-gray-500 leading-5">{reason.subtitle}</p>
               </div>
             </motion.div>
           ))}

@@ -2,7 +2,7 @@ import AnimatedButton from "./AnimatedButton";
 
 export default function ArtisanCTABanner() {
   return (
-    <div className="w-full px-6 lg:px-10 py-5">
+    <div className=" px-6 lg:px-10 py-5">
       <div className="bg-[#1B3A2D] rounded-2xl px-6 lg:px-10 py-6 md:py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
 
         {/* ── Icon + Text row (always a row) ── */}
@@ -20,10 +20,10 @@ export default function ArtisanCTABanner() {
 
           {/* Text — fills all remaining width */}
           <div className="flex-1 min-w-0">
-            <p className="text-white font-semibold text-[15px] mb-1">
+            <p className="card-title text-white font-semibold text-[15px] mb-1">
               Are you a skilled artisan?
             </p>
-            <p className="text-[#8DB8A0] text-[14px] lg:text-[15.5px] leading-relaxed">
+            <p className="body-text text-[#8DB8A0] text-[14px] lg:text-[15.5px] leading-relaxed">
               Join thousands of artisans already growing their{" "}
               <br className="hidden sm:block lg:hidden" />
               business on ArtisanHub.
@@ -38,7 +38,7 @@ export default function ArtisanCTABanner() {
           <AnimatedButton className="w-full lg:w-auto">
             Join as Artisan
           </AnimatedButton>
-        </div>
+        </div> 
 
       </div>
     </div>

@@ -28,6 +28,7 @@ export default function ArtisansProvider({ children }) {
   const [sortBy, setSortBy] = useState('nearest')
   const [ratings, setRatings] = useState([])
   const [openNow, setOpenNow] = useState(false)
+  const [selectedArtisan, setSelectedArtisan] = useState(null)
   const [verifiedOnly, setVerifiedOnly] = useState(false)
 
   const [filteredArtisans, setFilteredArtisans] = useState(Artisans)
@@ -125,21 +126,21 @@ export default function ArtisansProvider({ children }) {
     setFilteredArtisans(computeResults())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [distance, sortBy, ratings, openNow, verifiedOnly])
-
-  const value = {
-    Artisans,
-    service, setService,
-    location, setLocation,
-    distance, setDistance,
-    sortBy, setSortBy,
-    ratings, toggleRating,
-    openNow, setOpenNow,
-    verifiedOnly, setVerifiedOnly,
-    filteredArtisans,setFilteredArtisans,
-    clearAll,
-    toggleRating,
-    handleSearch,
-  }
+const value = {
+  Artisans,
+  service, setService,
+  location, setLocation,
+  distance, setDistance,
+  sortBy, setSortBy,
+  ratings, toggleRating,
+  openNow, setOpenNow,
+  verifiedOnly, setVerifiedOnly,
+  filteredArtisans,
+  clearAll,
+  handleSearch,
+  selectedArtisan,
+  setSelectedArtisan,   
+}
 
   return (
     <ArtisansContext.Provider value={value}>

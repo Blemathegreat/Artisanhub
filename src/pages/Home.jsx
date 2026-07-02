@@ -10,9 +10,11 @@ export default function Home() {
   return (
     <div><Hero />
     
-    <PopularCategories />
+ <PopularCategories />
     <WhyChooseUs />
+      
     <HowItWorks />
+     
     <ArtisanCTABannery />
     <Testimonials />
     </div>

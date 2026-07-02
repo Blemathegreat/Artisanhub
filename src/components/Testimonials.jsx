@@ -43,8 +43,8 @@ export default function TestimonialsSection() {
   return (
     <div className="w-full py-14 px- lg:px-10">
       <div className="text-center mb-10">
-        <h2 className="text-2xl font-bold text-gray-900">What our customers say</h2>
-        <p className="text-sm text-gray-400 mt-1">Real experiences from real people</p>
+        <h2 className="section-heading text-2xl font-bold text-gray-900">What our customers say</h2>
+        <p className="caption text-sm text-gray-400 mt-1">Real experiences from real people</p>
       </div>
 
      <motion.div 

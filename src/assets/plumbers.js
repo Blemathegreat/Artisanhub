@@ -1,0 +1,181 @@
+import Barber from './images/barber.png'
+import Barber1 from './images/barber1.png'
+import Choose1 from './images/choose1.png'
+import Choose2 from './images/choose2.png'
+import FemaleTailor from './images/FemaleTailor.png'
+import Hero from './images/hero.png'
+import Location1 from './images/location1.png'
+import Location from './images/location.png'
+import Video from './images/video.png'
+import Scissors from './images/scissors.png'
+import Password from './images/password.png'
+import Verified from './images/verified.png'
+import Artisan1 from "./images/artisan1.png"
+import Artisan2 from "./images/artisan2.png"
+import Artisan3 from "./images/artisan3.png"
+import Artisan4 from "./images/artisan4.png"
+import Electrician from './images/electrician.png'
+
+export const Plumbers = [
+  {
+    id: 12,
+    image: Barber,
+    title: "AquaFix Plumbing",
+    rating: 4.6,
+    location1: Location1,
+    totalRating: 95,
+    location: "Festac Town, Lagos",
+    distance: "1.3 km away",
+    description: "Pipe Repairs, Leakage Fix, Bathroom Installation",
+    whatsapp: "08012345612",
+    call: "08012345612",
+    verified: true,
+    openNow: true,
+    category: "Plumber",
+    homeService: true,
+    experience: "6 Years",
+    responseTime: "30 mins",
+    about: "AquaFix Plumbing provides fast, reliable pipe repairs, leakage fixes and full bathroom installations across Lagos.",
+    services: [
+      { name: "Pipe Repair", price: "₦5,000" },
+      { name: "Leakage Fix", price: "₦4,000" },
+      { name: "Bathroom Installation", price: "₦35,000" },
+      { name: "Emergency Call-out", price: "₦8,000" },
+    ],
+    portfolio: [Barber, Barber, Barber],
+    videos: [Video],
+    serviceAreas: ["Festac", "Amuwo-Odofin", "Satellite Town", "Mile 2"],
+    reviews: [
+      { id: 1, name: "Mrs. Okafor", rating: 5, comment: "Fixed my burst pipe within the hour. Lifesaver!" },
+      { id: 2, name: "Dele A.", rating: 4, comment: "Professional and clean work." },
+    ],
+  },
+  {
+    id: 13,
+    image: Barber,
+    title: "PipePro Services",
+    rating: 4.4,
+    location1: Location1,
+    totalRating: 112,
+    location: "Ikorodu, Lagos",
+    distance: "2.7 km away",
+    description: "Borehole Plumbing, Tank Installation, Drainage",
+    whatsapp: "08012345613",
+    call: "08012345613",
+    verified: true,
+    openNow: false,
+    category: "Plumber",
+    homeService: true,
+    experience: "8 Years",
+    responseTime: "45 mins",
+    about: "PipePro Services handles borehole plumbing, overhead tank installations and drainage systems across Ikorodu.",
+    services: [
+      { name: "Borehole Plumbing", price: "₦20,000" },
+      { name: "Tank Installation", price: "₦15,000" },
+      { name: "Drainage Fix", price: "₦6,000" },
+    ],
+    portfolio: [Barber, Barber, Barber],
+    videos: [Video],
+    serviceAreas: ["Ikorodu", "Imota", "Ogolonto", "Agric"],
+    reviews: [
+      { id: 1, name: "Rasheed B.", rating: 4, comment: "Tank installation was done neatly." },
+      { id: 2, name: "Mrs. Taiwo", rating: 5, comment: "Very experienced and trustworthy." },
+    ],
+  },
+  {
+    id: 14,
+    image: Barber,
+    title: "FlowMaster Plumbing",
+    rating: 4.7,
+    location1: Location1,
+    totalRating: 188,
+    location: "Mokola, Ibadan",
+    distance: "0.9 km away",
+    description: "Emergency Repairs, Pipe Fitting, Water Heater",
+    whatsapp: "08012345614",
+    call: "08012345614",
+    verified: true,
+    openNow: true,
+    category: "Plumber",
+    homeService: true,
+    experience: "9 Years",
+    responseTime: "20 mins",
+    about: "FlowMaster Plumbing is Ibadan's trusted emergency plumber, available for pipe fitting and water heater installations.",
+    services: [
+      { name: "Emergency Repair", price: "₦7,000" },
+      { name: "Pipe Fitting", price: "₦5,000" },
+      { name: "Water Heater Install", price: "₦18,000" },
+    ],
+    portfolio: [Barber, Barber, Barber],
+    videos: [Video],
+    serviceAreas: ["Mokola", "Sango", "Eleyele", "Ashi"],
+    reviews: [
+      { id: 1, name: "Prof. Adeyemi", rating: 5, comment: "Arrived quickly and solved the problem fast." },
+      { id: 2, name: "Bisi K.", rating: 4, comment: "Good work on the water heater." },
+    ],
+  },
+  {
+    id: 15,
+    image: Barber,
+    title: "Reliable Pipes Co.",
+    rating: 4.1,
+    location1: Location1,
+    totalRating: 43,
+    location: "Ota, Ogun State",
+    distance: "4.2 km away",
+    description: "General Plumbing, Sink Repairs, Toilet Fix",
+    whatsapp: "08012345615",
+    call: "08012345615",
+    verified: false,
+    openNow: true,
+    category: "Plumber",
+    homeService: true,
+    experience: "3 Years",
+    responseTime: "1 hour",
+    about: "Reliable Pipes Co. provides affordable general plumbing, sink repairs and toilet fixes for homes in Ota and environs.",
+    services: [
+      { name: "General Plumbing", price: "₦4,000" },
+      { name: "Sink Repair", price: "₦3,000" },
+      { name: "Toilet Fix", price: "₦3,500" },
+    ],
+    portfolio: [Barber, Barber, Barber],
+    videos: [Video],
+    serviceAreas: ["Ota", "Sango-Ota", "Ijoko", "Onipanu"],
+    reviews: [
+      { id: 1, name: "Mr. Lawal", rating: 4, comment: "Affordable and gets the job done." },
+      { id: 2, name: "Chuks E.", rating: 4, comment: "Fixed my toilet same day." },
+    ],
+  },
+  {
+    id: 16,
+    image: Barber,
+    title: "Swift Plumbing Solutions",
+    rating: 4.5,
+    location1: Location1,
+    totalRating: 134,
+    location: "Akure, Ondo State",
+    distance: "1.1 km away",
+    description: "Pipe Installation, Leakage Control, Renovation Plumbing",
+    whatsapp: "08012345616",
+    call: "08012345616",
+    verified: true,
+    openNow: false,
+    category: "Plumber",
+    homeService: true,
+    experience: "7 Years",
+    responseTime: "40 mins",
+    about: "Swift Plumbing Solutions handles full pipe installations, leakage control and renovation plumbing projects in Akure.",
+    services: [
+      { name: "Pipe Installation", price: "₦10,000" },
+      { name: "Leakage Control", price: "₦5,000" },
+      { name: "Renovation Plumbing", price: "₦25,000" },
+    ],
+    portfolio: [Barber, Barber1, Barber1],
+    videos: [Video],
+    serviceAreas: ["Akure", "Oba-Ile", "Ijoka", "Alagbaka"],
+    reviews: [
+      { id: 1, name: "Sola O.", rating: 5, comment: "Excellent work on our renovation project." },
+      { id: 2, name: "Nkechi P.", rating: 4, comment: "Swift by name, swift by nature." },
+    ],
+  },
+]

@@ -1,0 +1,181 @@
+import Barber from './images/barber.png'
+import Barber1 from './images/barber1.png'
+import Choose1 from './images/choose1.png'
+import Choose2 from './images/choose2.png'
+import FemaleTailor from './images/FemaleTailor.png'
+import Hero from './images/hero.png'
+import Location1 from './images/location1.png'
+import Location from './images/location.png'
+import Video from './images/video.png'
+import Scissors from './images/scissors.png'
+import Password from './images/password.png'
+import Verified from './images/verified.png'
+import Artisan1 from "./images/artisan1.png"
+import Artisan2 from "./images/artisan2.png"
+import Artisan3 from "./images/artisan3.png"
+import Artisan4 from "./images/artisan4.png"
+import Electrician from './images/electrician.png'
+
+export const Electricians = [
+  {
+    id: 17,
+    image: Electrician,
+    title: "BrightSpark Electricals",
+    rating: 4.8,
+    location1: Location1,
+    totalRating: 267,
+    location: "Yaba, Lagos",
+    distance: "0.6 km away",
+    description: "Wiring, Solar Installation, Generator Repair",
+    whatsapp: "08012345617",
+    call: "08012345617",
+    verified: true,
+    openNow: true,
+    category: "Electrician",
+    homeService: true,
+    experience: "10 Years",
+    responseTime: "20 mins",
+    about: "BrightSpark Electricals is a leading electrical company in Lagos offering wiring, solar installations and generator repairs.",
+    services: [
+      { name: "Wiring", price: "₦15,000" },
+      { name: "Solar Installation", price: "₦120,000" },
+      { name: "Generator Repair", price: "₦8,000" },
+      { name: "Emergency Call-out", price: "₦10,000" },
+    ],
+    portfolio: [Electrician, Electrician, Electrician],
+    videos: [Electrician],
+    serviceAreas: ["Yaba", "Akoka", "Iwaya", "Sabo"],
+    reviews: [
+      { id: 1, name: "Dr. Obi", rating: 5, comment: "Best electrician I've used in Lagos. Very thorough." },
+      { id: 2, name: "Gbenga L.", rating: 5, comment: "Solar installation was seamless." },
+    ],
+  },
+  {
+    id: 18,
+    image: Electrician,
+    title: "VoltEdge Services",
+    rating: 4.6,
+    location1: Location1,
+    totalRating: 154,
+    location: "Ijebu-Ode, Ogun State",
+    distance: "2.0 km away",
+    description: "Electrical Repairs, Panel Upgrade, Lighting",
+    whatsapp: "08012345618",
+    call: "08012345618",
+    verified: true,
+    openNow: true,
+    category: "Electrician",
+    homeService: true,
+    experience: "7 Years",
+    responseTime: "30 mins",
+    about: "VoltEdge Services handles all electrical repairs, distribution panel upgrades and lighting installations in Ijebu-Ode.",
+    services: [
+      { name: "Electrical Repair", price: "₦5,000" },
+      { name: "Panel Upgrade", price: "₦20,000" },
+      { name: "Lighting Installation", price: "₦8,000" },
+    ],
+    portfolio: [Electrician, Electrician, Electrician],
+    videos: [Electrician],
+    serviceAreas: ["Ijebu-Ode", "Ago-Iwoye", "Ijebu-Igbo", "Odogbolu"],
+    reviews: [
+      { id: 1, name: "Alhaji Musa", rating: 5, comment: "Panel upgrade done perfectly. No more tripping." },
+      { id: 2, name: "Folake A.", rating: 4, comment: "Fast response and quality work." },
+    ],
+  },
+  {
+    id: 19,
+    image: Electrician,
+    title: "PowerLine Electricals",
+    rating: 4.3,
+    location1: Location1,
+    totalRating: 88,
+    location: "Ado-Ekiti, Ekiti State",
+    distance: "3.3 km away",
+    description: "Inverter Installation, Fault Detection, Rewiring",
+    whatsapp: "08012345619",
+    call: "08012345619",
+    verified: false,
+    openNow: true,
+    category: "Electrician",
+    homeService: true,
+    experience: "5 Years",
+    responseTime: "45 mins",
+    about: "PowerLine Electricals provides inverter installations, electrical fault detection and full rewiring services in Ado-Ekiti.",
+    services: [
+      { name: "Inverter Installation", price: "₦25,000" },
+      { name: "Fault Detection", price: "₦4,000" },
+      { name: "Rewiring", price: "₦18,000" },
+    ],
+    portfolio: [Electrician, Electrician, Electrician],
+    videos: [Electrician],
+    serviceAreas: ["Ado-Ekiti", "Iyin", "Oye", "Ikere"],
+    reviews: [
+      { id: 1, name: "Mr. Fayemi", rating: 4, comment: "Inverter works great, good installation." },
+      { id: 2, name: "Toyin B.", rating: 4, comment: "Found the fault quickly and fixed it." },
+    ],
+  },
+  {
+    id: 20,
+    image: Electrician,
+    title: "SafeWire Solutions",
+    rating: 4.7,
+    location1: Location1,
+    totalRating: 199,
+    location: "Ile-Ife, Osun State",
+    distance: "1.4 km away",
+    description: "Solar Panel Setup, Wiring, Electrical Maintenance",
+    whatsapp: "08012345620",
+    call: "08012345620",
+    verified: true,
+    openNow: false,
+    category: "Electrician",
+    homeService: true,
+    experience: "8 Years",
+    responseTime: "35 mins",
+    about: "SafeWire Solutions specializes in solar panel setups, complete wiring and scheduled electrical maintenance in Ile-Ife.",
+    services: [
+      { name: "Solar Panel Setup", price: "₦100,000" },
+      { name: "Wiring", price: "₦12,000" },
+      { name: "Electrical Maintenance", price: "₦6,000" },
+    ],
+    portfolio: [Electrician, Electrician, Electrician],
+    videos: [Electrician],
+    serviceAreas: ["Ile-Ife", "Ilesa", "Ipetumodu", "Moro"],
+    reviews: [
+      { id: 1, name: "Prof. Adeleye", rating: 5, comment: "Solar setup has saved us so much on NEPA bills." },
+      { id: 2, name: "Yemi O.", rating: 4, comment: "Clean wiring job, very tidy." },
+    ],
+  },
+  {
+    id: 21,
+    image: Electrician,
+    title: "Watts Up Electricals",
+    rating: 4.4,
+    location1: Location1,
+    totalRating: 72,
+    location: "Alagbado, Lagos",
+    distance: "2.9 km away",
+    description: "CCTV Installation, Wiring, Generator Servicing",
+    whatsapp: "08012345621",
+    call: "08012345621",
+    verified: true,
+    openNow: true,
+    category: "Electrician",
+    homeService: true,
+    experience: "5 Years",
+    responseTime: "40 mins",
+    about: "Watts Up Electricals covers CCTV installations, household wiring and generator servicing across Alagbado and surrounds.",
+    services: [
+      { name: "CCTV Installation", price: "₦35,000" },
+      { name: "Wiring", price: "₦10,000" },
+      { name: "Generator Servicing", price: "₦7,000" },
+    ],
+    portfolio: [Electrician, Electrician, Electrician],
+    videos: [Electrician],
+    serviceAreas: ["Alagbado", "Abule-Egba", "Meiran", "Ifako"],
+    reviews: [
+      { id: 1, name: "Hakeem O.", rating: 4, comment: "CCTV cameras working perfectly after 6 months." },
+      { id: 2, name: "Blessing N.", rating: 5, comment: "Generator servicing done same day." },
+    ],
+  },
+]

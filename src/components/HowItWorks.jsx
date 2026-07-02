@@ -82,17 +82,17 @@ const Connector = () => (
 export default function HowItWorks() {
   return (
     <section className="py-14 px-4 bg-white text-center">
-      <h2 className="text-2xl font-bold text-gray-900 mb-2">How it works</h2>
-      <p className="text-sm text-gray-500 mb-12">Get the best artisan service in 3 easy steps</p>
+      <h2 className="section-heading text-2xl font-bold text-gray-900 mb-2">How it works</h2>
+      <p className="caption text-sm text-gray-500 mb-12">Get the best artisan service in 3 easy steps</p>
 
-      <motion.div variants={containerVariants} initial="hidden" whileInView="visible"  className className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 px-6 lg:px-10">
+      <motion.div variants={containerVariants} initial="hidden" whileInView="visible"  className className="flex flex-col lg:flex-row items-center lg:justify-between   gap-4 md:gap-0 px-6 lg:px-10">
         {steps.map((step, index) => (
           <>
             {/* Card */}
             <motion.div
               key={step.id}
               variants={childrenVariant}
-              className="flex  items-center justify-between gap-3 md:space-x-4  bg-white border border-gray-200 rounded-2xl px-4 py-6 md:py-10 w-full md:w-[300px] shadow-sm"
+              className="flex  items-center lg:justify-between gap-3 md:space-x-4  bg-white border border-gray-200 rounded-2xl px-4 py-6 md:py-10 w-full  shadow-sm"
             >
               {/* Icon */}
               <div
@@ -105,8 +105,8 @@ export default function HowItWorks() {
 
               {/* Text */}
              <div className="flex flex-col gap-3 items-start text-left">
-               <p className="text-sm font-bold text-gray-900  font-bold">{step.id}. {step.title}</p>
-              <p className="text-xs text-gray-700 leading-relaxed font-bold">{step.description}</p>
+               <p className="card-title text-sm font-bold text-gray-900">{step.id}. {step.title}</p>
+              <p className="body-text text-xs text-gray-700 leading-relaxed font-bold">{step.description}</p>
              </div>
             </motion.div>
 

@@ -76,7 +76,7 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-[36px] sm:text-[44px] leading-[1.15] font-bold text-gray-900 tracking-tight"
+            className="display-heading text-[36px] sm:text-[44px] leading-[1.15] font-bold text-gray-900 tracking-tight"
           >
             <motion.span variants={childrenVariant} className="block">Skilled hands.</motion.span>
             <motion.span variants={childrenVariant} className="block">Trusted service.</motion.span>
@@ -84,7 +84,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Description */}
-          <p className="mt-4 text-gray-500 text-sm leading-6">
+          <p className="body-text mt-4 text-gray-500 text-sm leading-6">
             Find reliable and verified local artisans for your home and personal needs.
             Fast, easy and secure.
           </p>
@@ -148,7 +148,7 @@ export default function Hero() {
                 alt="Video"
                 className="w-10 h-10 rounded-full border border-gray-200 flex-shrink-0"
               />
-              <p className="text-sm text-gray-600 whitespace-nowrap">How it works</p>
+              <p className="body-text text-sm text-gray-600 whitespace-nowrap">How it works</p>
             </div>
           </div>
 
@@ -198,7 +198,7 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-[56px] leading-[1.1] font-bold text-gray-900 tracking-tight"
+            className="display-heading text-[56px] leading-[1.1] font-bold text-gray-900 tracking-tight"
           >
             <motion.span variants={childrenVariant} className="block">Skilled hands.</motion.span>
             <motion.span variants={childrenVariant} className="block">Trusted service.</motion.span>
@@ -206,7 +206,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Description */}
-          <p className="mt-6 max-w-md text-gray-500 text-base leading-7">
+          <p className="body-text mt-6 max-w-md text-gray-500 text-base leading-7">
             Find reliable and verified local artisans for your home and personal needs. Fast, easy and secure.
           </p>
 

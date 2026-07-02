@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { ArtisansContext } from '../../content/ArtisansPage'
 import ArtisansCard from './ArtisansCard'
+import ArtisanMap from './ArtisanMap'
 import FilterContent from './FilterContent'
+import { Link } from 'react-router-dom'
 import {
   ChevronDown, Search, MapPin, LocateFixed,
   Map, LayoutGrid, List, SlidersHorizontal, Scissors, X
@@ -11,12 +13,13 @@ export default function ArtisanProducts() {
   // Local UI state — controls whether the mobile drawer is open or closed
   // This is purely visual, so it lives here, NOT in context
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const [mapVisible, setMapVisible] = useState(false)
 
   const {
     service, setService,
     location, setLocation,
     filteredArtisans,
-    handleSearch,
+    handleSearch,selectedArtisan, setSelectedArtisan 
   } = useContext(ArtisansContext)
 
   const handleService = (e) => setService(e.target.value)
@@ -29,13 +32,13 @@ export default function ArtisanProducts() {
       <div className="flex flex-col sm:flex-row items-stretch gap-3 w-full border border-gray-200 rounded-2xl py-3 px-4">
 
         <div className="flex-1 min-w-0 border border-gray-200 rounded-xl px-4 py-2.5">
-          <label className="text-xs text-gray-400">What service do you need?</label>
+          <label className="small-label text-xs text-gray-400">What service do you need?</label>
           <div className="flex items-center gap-2 mt-1">
             <Scissors size={16} className="text-gray-700 shrink-0" />
             <select
               value={service}
               onChange={handleService}
-              className="flex-1 min-w-0 text-sm font-semibold text-gray-900 bg-transparent outline-none appearance-none"
+              className="body-text flex-1 min-w-0 text-sm font-semibold text-gray-900 bg-transparent outline-none appearance-none"
             >
               <option value="">All Services</option>
               <option>Barber</option>
@@ -48,7 +51,7 @@ export default function ArtisanProducts() {
         </div>
 
         <div className="flex-1 min-w-0 border border-gray-200 rounded-xl px-4 py-2.5">
-          <label className="text-xs text-gray-400">Where?</label>
+          <label className="small-label text-xs text-gray-400">Where?</label>
           <div className="flex items-center gap-2 mt-1">
             <MapPin size={16} className="text-purple-600 shrink-0" />
             <input
@@ -56,7 +59,7 @@ export default function ArtisanProducts() {
               value={location}
               onChange={handleLocation}
               placeholder="Enter your location"
-              className="flex-1 min-w-0 text-sm font-semibold text-gray-900 bg-transparent outline-none"
+              className="body-text flex-1 min-w-0 text-sm font-semibold text-gray-900 bg-transparent outline-none"
             />
             <button type="button" className="text-gray-400 hover:text-purple-600 shrink-0">
               <LocateFixed size={16} />
@@ -87,10 +90,17 @@ export default function ArtisanProducts() {
           </button>
 
           <div className="flex items-center gap-2 lg:gap-4 lg:ml-auto">
-            <button className="border border-purple-200 text-purple-600 px-3 lg:px-4 py-2 rounded-md flex items-center gap-2 text-sm">
-              <Map size={18} />
-              <span>View on Map</span>
-            </button>
+            <button
+  onClick={() => {
+    setMapVisible((prev) => !prev)
+    if (mapVisible) setSelectedArtisan(null)
+  }}
+  className="border border-purple-200 text-purple-600 px-3 lg:px-4 py-2
+             rounded-md flex items-center gap-2 text-sm"
+>
+  <Map size={18} />
+  <span>{mapVisible ? 'Hide Map' : 'View on Map'}</span>
+</button>
             <div className="flex items-center border border-gray-200 rounded-md overflow-hidden">
               <button className="p-2 bg-purple-50 text-purple-600">
                 <LayoutGrid size={18} />
@@ -103,7 +113,7 @@ export default function ArtisanProducts() {
         </div>
 
         <div className="flex flex-col items-start w-full min-w-0">
-          <h1 className="text-lg lg:text-2xl font-bold w-full break-words">
+          <h1 className="display-heading text-lg lg:text-2xl font-bold w-full break-words">
             {service && location
               ? `${service}s Near ${location}`
               : service
@@ -112,7 +122,7 @@ export default function ArtisanProducts() {
               ? `Artisans Near ${location}`
               : 'All Artisans'}
           </h1>
-          <p className="text-sm text-gray-500">
+          <p className="caption text-sm text-gray-500">
             {filteredArtisans.length} Artisan{filteredArtisans.length !== 1 ? 's' : ''} Found
           </p>
         </div>
@@ -128,11 +138,28 @@ export default function ArtisanProducts() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        {filteredArtisans.map((item) => (
-          <ArtisansCard key={item.id} {...item} />
-        ))}
-      </div>
+     <div className={`flex gap-4 ${mapVisible ? 'flex-row items-start' : 'flex-col'}`}>
+
+  {/* Card grid */}
+  <div className={`grid gap-3 transition-all duration-300 ${
+    mapVisible
+      ? 'grid-cols-1 w-[45%] overflow-y-auto max-h-[70vh]'
+      : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full'
+  }`}>
+    {filteredArtisans.map((item) => (
+    <Link key={item.id} to={`/artisan/${item.id}`}>
+      <ArtisansCard {...item} />
+    </Link>
+    ))}
+  </div>
+
+  {/* Map panel */}
+  {mapVisible && (
+    <div className="flex-1 h-[70vh] min-h-[400px] sticky top-4">
+      <ArtisanMap />
+    </div>
+  )}
+</div>
 
       {/* ── MOBILE FILTER DRAWER ── */}
 
@@ -158,7 +185,7 @@ export default function ArtisanProducts() {
 
         {/* Close button */}
         <div className="flex items-center justify-between px-5 pt-2 pb-1">
-          <span className="font-semibold text-gray-800">Filters</span>
+          <span className="card-title font-semibold text-gray-800">Filters</span>
           <button
             onClick={() => setDrawerOpen(false)}
             className="p-1.5 rounded-full hover:bg-gray-100 text-gray-500"

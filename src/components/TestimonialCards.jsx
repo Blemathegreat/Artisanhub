@@ -11,12 +11,12 @@ export default function TestimonialCards({ title, description, image, location, 
   return (
     <div className="bg-white rounded-xl border border-gray-100 shadow-sm max-w-[300px] mx-auto lg:mx-0 p-5 flex flex-col gap-4">
       <QuoteIcon />
-      <p className="text-sm text-gray-700 w-3/4 leading-relaxed">{description}</p>
+      <p className="body-text text-sm text-gray-700 w-3/4 leading-relaxed">{description}</p>
       <div className="flex items-center gap-3">
         <img src={image} alt={title} className="w-11 h-11 rounded-full object-cover" />
         <div className='flex flex-col space-y-[4px]'>
-          <h3 className="text-sm font-semibold text-gray-900">{title}</h3>
-          <p className="text-xs text-gray-400 mb-2">{location}</p>
+          <h3 className="card-title text-sm font-semibold text-gray-900">{title}</h3>
+          <p className="caption text-xs text-gray-400 mb-2">{location}</p>
           <div className="flex items-center gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} size={13} className={i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300 fill-gray-300"} />
