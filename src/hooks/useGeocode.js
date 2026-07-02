@@ -2,9 +2,7 @@ import { useState } from 'react'
 
 const geocodeCache = {}
 
-// This lock prevents two concurrent geocoding runs
-// Without it, React Strict Mode's double-invocation causes both runs
-// to see an empty cache simultaneously and fire duplicate requests
+
 let isRunning = false
 
 export function useGeocode() {
@@ -12,8 +10,7 @@ export function useGeocode() {
   const [loading, setLoading] = useState(false)
 
   const geocodeArtisans = async (artisans) => {
-    // If a geocoding run is already in progress, skip this call entirely
-    // This is what prevents Strict Mode's second invocation from firing
+
     if (isRunning) return
     isRunning = true
     setLoading(true)
@@ -23,8 +20,7 @@ export function useGeocode() {
     for (let i = 0; i < uncached.length; i++) {
       const artisan = uncached[i]
       try {
-        // Note the URL — /nominatim instead of the full Nominatim URL
-        // Vite proxy intercepts this and forwards it server-side
+       
         const res = await fetch(
           `/nominatim/search?` +
           `q=${encodeURIComponent(artisan.location + ', Nigeria')}&` +
