@@ -4,7 +4,7 @@ import { Bell } from 'lucide-react'
 import { photos, Artisans } from '../../assets/Photos.js'
 import { useParams } from 'react-router-dom'
 
-export default function ArtisanProfileNav() {
+export default function Artisanprofilenav() {
   const { id } = useParams()
   const artisan = Artisans.find(a => a.id === Number(id))
 

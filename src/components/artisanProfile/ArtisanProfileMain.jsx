@@ -3,7 +3,7 @@ import { ChevronRight, ArrowLeft } from 'lucide-react'
 import { Artisans } from '../../assets/Photos'
 
 import ProfileHeader     from './ProfileHeader'
-import ArtisanProfileNav from './ArtisanProfilenav'
+import Artisanprofilenav from './Artisanprofilenav'
 import ProfileAbout      from './ProfileAbout'
 import ProfileServices   from './ProfileServices'
 import ProfilePortfolio  from './ProfilePortfolio'
