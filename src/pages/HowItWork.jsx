@@ -1,5 +1,5 @@
 import React from 'react'
-import Main from '../components/howItWork/HowItWorksMain'
+import Main from '../components/howitwork/HowItWorksMain'
 
 export default function HowItWork() {
   return (
