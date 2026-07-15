@@ -21,7 +21,7 @@ export default function ArtisansCard({
     <div
       onClick={onClick}
       className={`
-        w-full flex flex-row items-start lg:flex-col gap-3 lg:gap-0
+        w-full h-full flex flex-row items-start lg:flex-col gap-3 lg:gap-0
         border rounded-xl overflow-hidden p-3 lg:p-0
         transition-all duration-200
         ${onClick ? 'cursor-pointer' : ''}
@@ -45,8 +45,7 @@ export default function ArtisansCard({
 
         <button
           onClick={(e) => {
-            // Stop click from bubbling up to the card's onClick
-            // Without this, liking a card would also trigger setSelectedArtisan
+            
             e.stopPropagation()
             setIsLiked((p) => !p)
           }}
@@ -86,7 +85,7 @@ export default function ArtisansCard({
         </div>
 
         {/* Action buttons — desktop only */}
-        <div className="hidden lg:flex gap-2 mt-2">
+        <div className="hidden lg:flex gap-2 mt-auto">
           <a
             href={`https://wa.me/${whatsapp}`}
             onClick={(e) => e.stopPropagation()}

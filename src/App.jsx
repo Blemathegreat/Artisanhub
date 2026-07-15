@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './pages/Home'
 import Search from './pages/Search'
+import HowItWork from './pages/HowItWork'
 import ArtisanProfile from './pages/ArtisanProfile'
 import Dashboard from './pages/Dashboard'
 import Onboarding from './pages/Onboarding'
@@ -48,6 +49,7 @@ export default function App() {
         <Route element={<PublicLayout />}>
           <Route path='/'          element={<Home />} />
           <Route path='/search'    element={<Search />} />
+          <Route path='/how-it-works' element={<HowItWork />} />
           <Route path='/dashboard' element={<Dashboard />} />
         </Route>
 

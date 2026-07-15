@@ -11,7 +11,7 @@ export default function TestimonialCards({ title, description, image, location, 
   return (
     <div className="bg-white rounded-xl border border-gray-100 shadow-sm max-w-[300px] mx-auto lg:mx-0 p-5 flex flex-col gap-4">
       <QuoteIcon />
-      <p className="body-text text-sm text-gray-700 w-3/4 leading-relaxed">{description}</p>
+      <p className="text-sm text-gray-700 w-3/4 leading-relaxed">{description}</p>
       <div className="flex items-center gap-3">
         <img src={image} alt={title} className="w-11 h-11 rounded-full object-cover" />
         <div className='flex flex-col space-y-[4px]'>
