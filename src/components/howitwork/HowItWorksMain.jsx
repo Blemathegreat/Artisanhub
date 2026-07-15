@@ -3,7 +3,7 @@ import HeroSection      from './HeroSection'
 import CustomerJourney  from './CustomerJourney'
 import ArtisanJourney   from './ArtisanJourney'
 import TrustSection     from './TrustSection'
-import FAQSection       from './FAQSection'
+import FaqSection       from './FaqSection'
 import CTASection       from './CTASection'
 
 export default function HowItWorksMain() {
@@ -13,7 +13,7 @@ export default function HowItWorksMain() {
       <CustomerJourney />
       <ArtisanJourney />
       <TrustSection />
-      <FAQSection />
+      <FaqSection />
       <CTASection />
     </main>
   )
