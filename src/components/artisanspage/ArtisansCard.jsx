@@ -75,7 +75,7 @@ export default function ArtisansCard({
           <span className="text-gray-400">({totalRating} reviews)</span>
         </div>
 
-        <p className="text-xs text-gray-500 h-[40px] w-[200px] md:w-full line-clamp-2">
+        <p className="text-xs text-gray-500 h-[40px]  md:w-full line-clamp-2">
           {description}
         </p>
 

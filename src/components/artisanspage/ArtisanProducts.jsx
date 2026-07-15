@@ -141,13 +141,13 @@ export default function ArtisanProducts() {
      <div className={`flex gap-4 ${mapVisible ? 'flex-row items-start' : 'flex-col'}`}>
 
   {/* Card grid */}
-  <div className={`grid gap-3 transition-all duration-300 ${
+  <div className={`grid gap-3 items-stretch transition-all duration-300 ${
     mapVisible
       ? 'grid-cols-1 w-[45%] overflow-y-auto max-h-[70vh]'
       : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full'
   }`}>
     {filteredArtisans.map((item) => (
-    <Link key={item.id} to={`/artisan/${item.id}`}>
+    <Link key={item.id} to={`/artisan/${item.id}`} >
       <ArtisansCard {...item} />
     </Link>
     ))}
@@ -178,7 +178,7 @@ export default function ArtisanProducts() {
           drawerOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
-        {/* Drag handle — visual affordance that this panel can be dismissed */}
+        {/* Drag handle — */}
         <div className="flex justify-center pt-3 pb-1">
           <div className="w-10 h-1 bg-gray-200 rounded-full" />
         </div>
