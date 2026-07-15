@@ -6,7 +6,7 @@ import TrustSection     from './TrustSection'
 import FAQSection       from './FAQSection'
 import CTASection       from './CTASection'
 
-export default function HowItWorks() {
+export default function HowItWorksMain() {
   return (
     <main className="bg-white">
       <HeroSection />
